@@ -1,0 +1,322 @@
+>python origin_frame.py
+test_001 (origin_frame.Test001) ...
+SETUPCOMMON_Test001
+SETUP_001
+TEST_001
+TEARDOWN_001
+TEARDOWNCOMMON_Test001
+ok
+
+
+
+test_002 (origin_frame.Test001) ...
+SETUPCOMMON_Test001
+SETUP_002
+TEST_002
+TEARDOWN_002
+TEARDOWNCOMMON_Test001
+ok
+
+
+
+test_001 (origin_frame.Test002) ...
+SETUPCOMMON_Test002
+SetUpCommon: [FAIL] - FAIL This
+ERROR
+TEARDOWNCOMMON_Test002
+ERROR
+
+
+
+test_002 (origin_frame.Test002) ...
+SETUPCOMMON_Test002
+SetUpCommon: [FAIL] - FAIL This
+ERROR
+TEARDOWNCOMMON_Test002
+ERROR
+
+
+
+test_001 (origin_frame.Test003) ...
+SETUPCOMMON_Test003
+SETUP_001
+SetUp_setUp_001: [FAIL] - FAIL This
+FAIL
+TEARDOWN_001
+TEARDOWNCOMMON_Test003
+
+
+
+test_002 (origin_frame.Test003) ...
+SETUPCOMMON_Test003
+SETUP_002
+TEST_002
+FAIL
+TEARDOWN_002
+TEARDOWNCOMMON_Test003
+
+
+
+test_003 (origin_frame.Test003) ...
+SETUPCOMMON_Test003
+SETUP_003
+TEST_003
+TEARDOWN_003
+TearDown_tearDown_003: [FAIL] - FAIL This
+FAIL
+TEARDOWNCOMMON_Test003
+
+
+
+test_001 (origin_frame.Test004) ...
+SETUPCOMMON_Test004
+SETUP_001
+TEST_001
+TEARDOWN_001
+TEARDOWNCOMMON_Test004
+TearDownCommon: [FAIL] - Fail This
+ERROR
+
+
+
+test_001 (origin_frame.Test005) ...
+SETUPCOMMON_Test005
+ERROR
+TEARDOWNCOMMON_Test005
+ERROR
+
+
+
+test_002 (origin_frame.Test005) ...
+SETUPCOMMON_Test005
+ERROR
+TEARDOWNCOMMON_Test005
+ERROR
+
+
+
+test_001 (origin_frame.Test006) ...
+SETUPCOMMON_Test006
+SETUP_001
+ERROR
+TEARDOWNCOMMON_Test006
+ERROR
+
+
+
+test_002 (origin_frame.Test006) ...
+SETUPCOMMON_Test006
+SETUP_002
+TEST_002
+ERROR
+TEARDOWN_002
+TEARDOWNCOMMON_Test006
+
+
+
+test_003 (origin_frame.Test006) ...
+SETUPCOMMON_Test006
+SETUP_003
+TEST_003
+TEARDOWN_003
+ERROR
+
+
+
+test_001 (origin_frame.Test007) ...
+SETUPCOMMON_Test007
+SETUP_001
+TEST_001
+TEARDOWN_001
+TEARDOWNCOMMON_Test007
+ERROR
+
+
+
+
+======================================================================
+ERROR: test_001 (origin_frame.Test002)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\python_project\my_space\workspace\unittest_framework_sandbox\1st\origin_frame.py", line 112, in run
+    self.setUp(result) # add arguments for add result 'fail' on setup_test
+  File "D:\python_project\my_space\workspace\unittest_framework_sandbox\1st\origin_frame.py", line 46, in setUp
+    raise IOError(c_res_logs)
+OSError: FAIL This
+
+======================================================================
+ERROR: test_001 (origin_frame.Test002)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\python_project\my_space\workspace\unittest_framework_sandbox\1st\origin_frame.py", line 138, in run
+    self.tearDown(result) # add arguments for add result 'fail' on teardown_test
+  File "D:\python_project\my_space\workspace\unittest_framework_sandbox\1st\origin_frame.py", line 84, in tearDown
+    if t_res == "FAIL":
+UnboundLocalError: local variable 't_res' referenced before assignment
+
+======================================================================
+ERROR: test_002 (origin_frame.Test002)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\python_project\my_space\workspace\unittest_framework_sandbox\1st\origin_frame.py", line 112, in run
+    self.setUp(result) # add arguments for add result 'fail' on setup_test
+  File "D:\python_project\my_space\workspace\unittest_framework_sandbox\1st\origin_frame.py", line 46, in setUp
+    raise IOError(c_res_logs)
+OSError: FAIL This
+
+======================================================================
+ERROR: test_002 (origin_frame.Test002)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\python_project\my_space\workspace\unittest_framework_sandbox\1st\origin_frame.py", line 138, in run
+    self.tearDown(result) # add arguments for add result 'fail' on teardown_test
+  File "D:\python_project\my_space\workspace\unittest_framework_sandbox\1st\origin_frame.py", line 84, in tearDown
+    if t_res == "FAIL":
+UnboundLocalError: local variable 't_res' referenced before assignment
+
+======================================================================
+ERROR: test_001 (origin_frame.Test004)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\python_project\my_space\workspace\unittest_framework_sandbox\1st\origin_frame.py", line 138, in run
+    self.tearDown(result) # add arguments for add result 'fail' on teardown_test
+  File "D:\python_project\my_space\workspace\unittest_framework_sandbox\1st\origin_frame.py", line 83, in tearDown
+    raise IOError(c_res_logs)
+OSError: Fail This
+
+======================================================================
+ERROR: test_001 (origin_frame.Test005)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\python_project\my_space\workspace\unittest_framework_sandbox\1st\origin_frame.py", line 112, in run
+    self.setUp(result) # add arguments for add result 'fail' on setup_test
+  File "D:\python_project\my_space\workspace\unittest_framework_sandbox\1st\origin_frame.py", line 35, in setUp
+    c_res, c_res_logs = self._call_setUpCommon()
+  File "D:\python_project\my_space\workspace\unittest_framework_sandbox\1st\origin_frame.py", line 12, in _call_setUpCommon
+    method()
+  File "D:\python_project\my_space\workspace\unittest_framework_sandbox\1st\origin_frame.py", line 291, in setUpCommon
+    raise IOError("ERROR This")
+OSError: ERROR This
+
+======================================================================
+ERROR: test_001 (origin_frame.Test005)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\python_project\my_space\workspace\unittest_framework_sandbox\1st\origin_frame.py", line 138, in run
+    self.tearDown(result) # add arguments for add result 'fail' on teardown_test
+  File "D:\python_project\my_space\workspace\unittest_framework_sandbox\1st\origin_frame.py", line 84, in tearDown
+    if t_res == "FAIL":
+UnboundLocalError: local variable 't_res' referenced before assignment
+
+======================================================================
+ERROR: test_002 (origin_frame.Test005)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\python_project\my_space\workspace\unittest_framework_sandbox\1st\origin_frame.py", line 112, in run
+    self.setUp(result) # add arguments for add result 'fail' on setup_test
+  File "D:\python_project\my_space\workspace\unittest_framework_sandbox\1st\origin_frame.py", line 35, in setUp
+    c_res, c_res_logs = self._call_setUpCommon()
+  File "D:\python_project\my_space\workspace\unittest_framework_sandbox\1st\origin_frame.py", line 12, in _call_setUpCommon
+    method()
+  File "D:\python_project\my_space\workspace\unittest_framework_sandbox\1st\origin_frame.py", line 291, in setUpCommon
+    raise IOError("ERROR This")
+OSError: ERROR This
+
+======================================================================
+ERROR: test_002 (origin_frame.Test005)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\python_project\my_space\workspace\unittest_framework_sandbox\1st\origin_frame.py", line 138, in run
+    self.tearDown(result) # add arguments for add result 'fail' on teardown_test
+  File "D:\python_project\my_space\workspace\unittest_framework_sandbox\1st\origin_frame.py", line 84, in tearDown
+    if t_res == "FAIL":
+UnboundLocalError: local variable 't_res' referenced before assignment
+
+======================================================================
+ERROR: test_001 (origin_frame.Test006)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\python_project\my_space\workspace\unittest_framework_sandbox\1st\origin_frame.py", line 112, in run
+    self.setUp(result) # add arguments for add result 'fail' on setup_test
+  File "D:\python_project\my_space\workspace\unittest_framework_sandbox\1st\origin_frame.py", line 37, in setUp
+    t_res, t_res_logs = self._call_setUp_test()
+  File "D:\python_project\my_space\workspace\unittest_framework_sandbox\1st\origin_frame.py", line 25, in _call_setUp_test
+    method()
+  File "D:\python_project\my_space\workspace\unittest_framework_sandbox\1st\origin_frame.py", line 325, in setUp_001
+    raise IOError("ERROR This")
+OSError: ERROR This
+
+======================================================================
+ERROR: test_001 (origin_frame.Test006)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\python_project\my_space\workspace\unittest_framework_sandbox\1st\origin_frame.py", line 138, in run
+    self.tearDown(result) # add arguments for add result 'fail' on teardown_test
+  File "D:\python_project\my_space\workspace\unittest_framework_sandbox\1st\origin_frame.py", line 84, in tearDown
+    if t_res == "FAIL":
+UnboundLocalError: local variable 't_res' referenced before assignment
+
+======================================================================
+ERROR: test_002 (origin_frame.Test006)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\python_project\my_space\workspace\unittest_framework_sandbox\1st\origin_frame.py", line 124, in run
+    testMethod()
+  File "D:\python_project\my_space\workspace\unittest_framework_sandbox\1st\origin_frame.py", line 338, in test_002
+    raise IOError("ERROR This")
+OSError: ERROR This
+
+======================================================================
+ERROR: test_003 (origin_frame.Test006)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\python_project\my_space\workspace\unittest_framework_sandbox\1st\origin_frame.py", line 138, in run
+    self.tearDown(result) # add arguments for add result 'fail' on teardown_test
+  File "D:\python_project\my_space\workspace\unittest_framework_sandbox\1st\origin_frame.py", line 75, in tearDown
+    t_res, t_res_logs = self._call_tearDown_test()
+  File "D:\python_project\my_space\workspace\unittest_framework_sandbox\1st\origin_frame.py", line 65, in _call_tearDown_test
+    method()
+  File "D:\python_project\my_space\workspace\unittest_framework_sandbox\1st\origin_frame.py", line 351, in tearDown_003
+    raise IOError("ERROR This")
+OSError: ERROR This
+
+======================================================================
+ERROR: test_001 (origin_frame.Test007)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\python_project\my_space\workspace\unittest_framework_sandbox\1st\origin_frame.py", line 138, in run
+    self.tearDown(result) # add arguments for add result 'fail' on teardown_test
+  File "D:\python_project\my_space\workspace\unittest_framework_sandbox\1st\origin_frame.py", line 80, in tearDown
+    c_res, c_res_logs = self._call_tearDownCommon()
+  File "D:\python_project\my_space\workspace\unittest_framework_sandbox\1st\origin_frame.py", line 52, in _call_tearDownCommon
+    method()
+  File "D:\python_project\my_space\workspace\unittest_framework_sandbox\1st\origin_frame.py", line 376, in tearDownCommon
+    raise IOError("ERROR This")
+OSError: ERROR This
+
+======================================================================
+FAIL: test_001 (origin_frame.Test003)
+----------------------------------------------------------------------
+None: None
+
+======================================================================
+FAIL: test_002 (origin_frame.Test003)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\python_project\my_space\workspace\unittest_framework_sandbox\1st\origin_frame.py", line 124, in run
+    testMethod()
+  File "D:\python_project\my_space\workspace\unittest_framework_sandbox\1st\origin_frame.py", line 243, in test_002
+    raise AssertionError("FAIL This")
+AssertionError: FAIL This
+
+======================================================================
+FAIL: test_003 (origin_frame.Test003)
+----------------------------------------------------------------------
+None: None
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.149s
+
+FAILED (failures=3, errors=14)
+
+D:\python_project\my_space\workspace\unittest_framework_sandbox\1st>
