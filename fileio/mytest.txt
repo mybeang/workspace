@@ -1,0 +1,5 @@
+Open System Properties (Right click Computer in the start menu, or use the keyboard shortcut Win + Pause )
+Click Advanced system settings in the sidebar.
+Click Environment Variables...
+Select PATH in the System variables section.
+Click Edit.

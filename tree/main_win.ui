@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>640</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTreeWidget" name="TR_TC">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>291</width>
+      <height>431</height>
+     </rect>
+    </property>
+    <property name="indentation">
+     <number>10</number>
+    </property>
+    <property name="allColumnsShowFocus">
+     <bool>true</bool>
+    </property>
+    <property name="expandsOnDoubleClick">
+     <bool>true</bool>
+    </property>
+    <attribute name="headerDefaultSectionSize">
+     <number>200</number>
+    </attribute>
+    <attribute name="headerMinimumSectionSize">
+     <number>0</number>
+    </attribute>
+    <column>
+     <property name="text">
+      <string>Test Cases</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Result</string>
+     </property>
+    </column>
+    <item>
+     <property name="text">
+      <string>Power On/Off Test</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Boot Loader Booting Test</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>EEPROM Read/Write Test</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Diagnostic Test</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>OS Image Download Test</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>OS Booting Test</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>RTC Operating Test</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Watchdog Test</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QPushButton" name="PB_StartTest">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>20</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Start Test</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="CB_EEPROM">
+    <property name="geometry">
+     <rect>
+      <x>327</x>
+      <y>128</y>
+      <width>171</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>EEPROM Read/Write Test</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="CB_RTCOp">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>280</y>
+      <width>181</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>RTC Operating Test</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LE_BLBRE">
+    <property name="geometry">
+     <rect>
+      <x>524</x>
+      <y>90</y>
+      <width>31</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>20</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="CB_Diag">
+    <property name="geometry">
+     <rect>
+      <x>327</x>
+      <y>167</y>
+      <width>121</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Diagnostic Test</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LE_DiagRE">
+    <property name="geometry">
+     <rect>
+      <x>527</x>
+      <y>166</y>
+      <width>31</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>20</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="CB_BLBooting">
+    <property name="geometry">
+     <rect>
+      <x>324</x>
+      <y>91</y>
+      <width>171</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Boot Loader Booting Test</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="CB_WDOp">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>322</y>
+      <width>171</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Watchdog Operatiog Test</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LE_EEPROMRE">
+    <property name="geometry">
+     <rect>
+      <x>527</x>
+      <y>127</y>
+      <width>31</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>20</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="CB_OsImgDn">
+    <property name="geometry">
+     <rect>
+      <x>329</x>
+      <y>202</y>
+      <width>181</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>OS Image Download Test</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LE_PowRE">
+    <property name="geometry">
+     <rect>
+      <x>524</x>
+      <y>55</y>
+      <width>31</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>20</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="CB_PwrOnOff">
+    <property name="geometry">
+     <rect>
+      <x>324</x>
+      <y>56</y>
+      <width>131</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Power On/Off Test</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="CB_OSBooting">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>241</y>
+      <width>181</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>OS Booting Test</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LE_WDRE">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>320</y>
+      <width>31</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>20</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LE_RTCRE">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>279</y>
+      <width>31</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>20</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LE_OSDNRE">
+    <property name="geometry">
+     <rect>
+      <x>529</x>
+      <y>200</y>
+      <width>31</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>20</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LE_OSBootRE">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>240</y>
+      <width>31</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>20</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="PB_PASS">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>360</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>PASS</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="PB_FAIL">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>380</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>FAIL</string>
+    </property>
+   </widget>
+   <widget class="QPlainTextEdit" name="PTE_what">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>370</y>
+      <width>171</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="plainText">
+     <string>What is this?</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="RB_Console">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>410</y>
+      <width>90</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Console</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

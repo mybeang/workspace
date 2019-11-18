@@ -1,0 +1,4 @@
+pandas
+wmi
+pythoncom
+tabulate
