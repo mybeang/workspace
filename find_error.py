@@ -37,8 +37,9 @@ def notify_error(filename):
     # Unexpected text filter list
     ora_00942_filter = re.compile(r"ORA-00942")
     
-    with open(filename, 'r') as f:
-        raw_data = f.read()
+    f = open(filename, 'r') 
+    raw_data = f.read()
+    f.close()
 
     # List of Filterd
     errors = error_filter.findall(raw_data)
@@ -68,7 +69,8 @@ def main():
     ## get name list of log files
     print(" [Find the log files]")
     cmd = ['find', '-name', '*' + today + ".log"]
-    log_files = subprocess.check_output(cmd).splitlines()
+    p = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    log_files = p.communicate()[0].split('\n')[:-1]
 
     print("   >> Found log files; {}".format(log_files))
 
