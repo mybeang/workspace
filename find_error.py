@@ -19,7 +19,7 @@ def input_db_cmd(cmd):
 
     :param cmd: Command for linux or something else.
     """
-    print("CMD: {}".format(cmd))
+    print("CMD: %s" % (cmd))
     subprocess.call(cmd.split(" "))
 
 
@@ -72,7 +72,7 @@ def main():
     p = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     log_files = p.communicate()[0].split('\n')[:-1]
 
-    print("   >> Found log files; {}".format(log_files))
+    print("   >> Found log files; %s" % (str(log_files)))
 
     for log_file in log_files:
         notify_error(log_file)
