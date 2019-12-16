@@ -29,7 +29,7 @@ def notify_error(filename):
 
     :param filename: Log file name.
     """
-    print("\nFilename: {}".format(filename))
+    print("\nFilename: %s" % filename)
 
     # Expected text filter list
     error_filter = re.compile(r"[e|E]rror|ERROR")
