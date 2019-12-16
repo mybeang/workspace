@@ -37,6 +37,7 @@ def notify_error(filename):
     # Unexpected text filter list
     ora_00942_filter = re.compile(r"ORA-00942")
     
+    # Open file
     f = open(filename, 'r') 
     raw_data = f.read()
     f.close()
@@ -51,13 +52,13 @@ def notify_error(filename):
     else:
         print("-: Please check the ERRORs")
         # if you need some commands, please add the command with the function of 'input_db_cmd'
-        # way1: input_db_cmd("cmd1 cmd2 %s cmd3 cmd4" % filename)
-        # way2: input_db_cmd("cmd1 cmd2 {} cmd3 cmd4".format(filename))
-        # way2-2: input_db_cmd("cmd1 {} cmd2 {} cmd3".format(filename, filename))
+        # ex1: input_db_cmd("cmd1 cmd2 %s cmd3 cmd4" % filename)
+        # ex2: input_db_cmd("cmd1 %s cmd2 %s cmd3 cmd4" % (filename, filename))
         return
 
 
 def main():
+    # print start
     start_string = "START TO FIND THE ERRORS"
     print("=" * len(start_string))
     print(start_string)
@@ -69,14 +70,17 @@ def main():
     ## get name list of log files
     print(" [Find the log files]")
     cmd = ['find', '-name', '*' + today + ".log"]
+    ### Run command 'find'
     p = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     log_files = p.communicate()[0].split('\n')[:-1]
 
     print("   >> Found log files; %s" % (str(log_files)))
 
+    # check the errors are in each log files
     for log_file in log_files:
         notify_error(log_file)
 
+    # print finish
     print("")
     finish_string = "FINISH TO FIND THE ERRORS"
     print("-" * len(finish_string))
